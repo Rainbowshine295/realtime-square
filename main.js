@@ -24,7 +24,7 @@ function gotPoses(results) {
     if (results.length > 0) {
         console.log(results);
 
-        noseX = results[0].pose.nose.X;
+        noseX = results[0].pose.nose.x;
         noseY = results[0].pose.nose.y;
 
         console.log("Nose x = " + noseX + " , Nose y = " + noseY);
@@ -43,5 +43,7 @@ function draw() {
     fill('#fcf403');
     stroke('#fc8403');
     square(noseX , noseY, difference);
+
+    document.getElementById("square_side").innerHTML = "Width and height of a square will be = "+ difference + "px";
 
 }
